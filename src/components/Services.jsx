@@ -14,12 +14,12 @@ const Services = () => {
           <CardTitle>Concepção</CardTitle>
         </Card>
         <Card $centerCard={'true'}>
-          <CardIcon src={developmentIcon} alt="Development Icon" />
-          <CardTitle>Desenvolvimento</CardTitle>
-        </Card>
-        <Card>
           <CardIcon src={designIcon} alt="Design Icon" />
           <CardTitle>Design</CardTitle>
+        </Card>
+        <Card>
+          <CardIcon src={developmentIcon} alt="Development Icon" />
+          <CardTitle>Desenvolvimento</CardTitle>
         </Card>
       </CardsContainer>
     </ServicesSection>
