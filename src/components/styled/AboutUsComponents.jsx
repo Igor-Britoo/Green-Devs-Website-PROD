@@ -16,6 +16,7 @@ export const AboutUsSection = styled.section`
   }
   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     gap: 36px;
+    padding: 130px 48px;
   }
 `
 

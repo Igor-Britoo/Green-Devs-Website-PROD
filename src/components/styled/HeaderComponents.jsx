@@ -20,7 +20,7 @@ export const HeaderSection = styled.header`
   }
   
   @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
-    padding: 24px 0px;
+    padding: 20px 0px;
     transition: background-color 0.3s ease, border-bottom 0.3s ease;
 
     .hamburger-react{
@@ -31,9 +31,6 @@ export const HeaderSection = styled.header`
       background-color: #568B53;
       border-bottom: 1px solid rgba(244,246,248, 0.4);
     `}
-  }
-  @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-    padding: 20px 0px;
   }
   @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     padding: 16px 0px;
@@ -47,16 +44,13 @@ export const HeaderContainer = styled.div`
   margin: 0 210px;
 
   @media screen and (max-width: ${props => props.theme.breakpoints.xl}){
-    margin: 0 150px;
-  }
-  @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
-    margin: 0 120px;
+    margin: 0 90px;
   }
   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-    margin: 0 80px;
-  }
-  @media screen and (max-width: ${props => props.theme.breakpoints.sm}){
     margin: 0 40px;
+  }
+  @media screen and (max-width: ${props => props.theme.breakpoints.xs}){
+    margin: 0 28px;
   }
 `;
 
