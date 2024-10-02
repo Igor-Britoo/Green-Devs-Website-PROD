@@ -6,6 +6,8 @@ import {
   Outlet
 } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
+import 'react-toastify/dist/ReactToastify.css';
+
 import GlobalStyles from "./styles/GlobalStyles";
 import Theme from "./styles/Theme"
 import Header from "./components/Header";

@@ -61,10 +61,8 @@ export const HeroSubtitle = styled.h2`
 
   @media screen and (max-width: ${props => props.theme.breakpoints.xxl}){
     font-size: ${props => props.theme.fontSizes['xxl']};
-    font-size: ${props => props.theme.fontSizes['xxl']};
   }
   @media screen and (max-width: ${props => props.theme.breakpoints.md}){
-    font-size: ${props => props.theme.fontSizes['xl']};
     font-size: ${props => props.theme.fontSizes['xl']};
   }
 `;

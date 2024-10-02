@@ -26,7 +26,7 @@ export const ServicesTitle = styled.h2`
   margin-bottom: 64px;
 
   @media screen and (max-width: ${props => props.theme.breakpoints.lg}){
-    font-size: 3rem;
+    font-size: ${props => props.theme.fontSizes['xxxxxl']};
     line-height: 4rem;
   }
 `;
