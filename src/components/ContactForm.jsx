@@ -243,7 +243,7 @@ const ContactForm = () => {
             {formValues.investment === 20000 ? "Até " : ""}
             {formValues.investment === 100000 ? "Mais de " : ""}
             {formValues.investment !== 20000 && formValues.investment !== 100000 ? "Cerca de " : ""}
-            R$ {formValues.investment},00
+            R$ {formValues.investment.toLocaleString('pt-BR')},00
           </InvestmentValue>
         </InvestmentContainer>
 
