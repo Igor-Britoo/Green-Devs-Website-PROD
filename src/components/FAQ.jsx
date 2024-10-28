@@ -1,33 +1,38 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { Answer, FAQContainer, FAQItem, FAQSection, FAQTitle, PlusMinusIcon, Question } from './styled/FAQComponents'
 
-const FAQ = () => {
+const FAQ = forwardRef((props, ref) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqs = [
     {
-      question: 'Como você lida com informações confidenciais e segurança de dados?',
-      answer: 'Seguimos os padrões da indústria para segurança e privacidade...',
+      question: 'Que tipos de sites vocês desenvolvem?',
+      answer: 'Desenvolvemos uma ampla gama de sites, incluindo e-commerce, blogs, portais corporativos, landing pages e sistemas web personalizados.',
     },
     {
-      question: 'Quanto custa uma consultoria?',
-      answer: 'O custo depende do escopo e da duração do projeto...',
+      question: 'Como é o processo de desenvolvimento e quanto tempo leva?',
+      answer: 'Iniciamos com uma reunião para entender suas necessidades e objetivos, definimos o escopo do projeto, desenvolvemos um plano detalhado '
+            + 'com wireframes e desings visuais, construímos o site, realizamos testes rigorosos para garantir a fuincionalidade e segurança, lançamos '
+            + 'o site, e oferecemos suporte contínuo.',
     },
     {
-      question: 'Que tipo de suporte você oferece após a conclusão do projeto?',
-      answer: 'Oferecemos suporte contínuo por um período definido...',
+      question: 'Qual é o custo médio de desenvolvimento, existem taxas adicionais além do preço cotado inicialmente?',
+      answer: 'Os custos podem variar dependendo do tamanho e complexidade do projeto, mas nossos preços geralmente começam em torno de R$ 5.000,00. '
+            + 'Todas as taxas são discutidas e acordadas antecipadamente, mas podem surgir custos adicionais se houver mudanças significativas no escopo do projeto.',
     },
     {
-      question: 'Como os serviços de consultoria podem beneficiar minha empresa?',
-      answer: 'Nossos serviços ajudam a otimizar seus processos e aumentar a eficiência...',
+      question: 'Quais linguagens de programação e tecnologias vocês utilizam?',
+      answer: 'Utilizamos uma variedade de tecnologias como HTML, CSS, JavaScript, React, Node.js e muito mais, dependendo das necessidades do projeto.'
+            + ' Consideramos SEO(Search Engine Optimization) e responsividade em todos os nossos projetos.',
     },
     {
-      question: 'Que tipos de serviços de consultoria você oferece?',
-      answer: 'Oferecemos serviços em desenvolvimento de software, consultoria em TI e mais...',
+      question: 'Como vocês garantem a segurança dos sites que desenvolvem?',
+      answer: 'Implementamos práticas recomendadas de segurança, como criptografia SSL, proteção contra SQL Injection e Cross-Site Scripting (XSS), '
+            + 'além de manter nossos servidores e softwares atualizados.',
     },
     {
-      question: 'Quais são as principais etapas do seu ciclo de vida de desenvolvimento de software?',
-      answer: 'Nosso processo inclui levantamento de requisitos, design, desenvolvimento, testes e implantação...',
+      question: 'Vocês oferecem manutenção contínua depois do desenvolvimento?',
+      answer: 'Sim, oferecemos planos de manutenção contínua para garantir que seu site esteja sempre seguro, atualizado e funcnionando perfeitamente.',
     },
   ];
 
@@ -36,7 +41,7 @@ const FAQ = () => {
   };
 
   return (
-    <FAQSection>
+    <FAQSection ref={ref} {...props}>
       <FAQTitle>Perguntas Frequentes</FAQTitle>
 
       <FAQContainer>
@@ -54,6 +59,6 @@ const FAQ = () => {
       </FAQContainer>
     </FAQSection>
   );
-};
+});
 
 export default FAQ;

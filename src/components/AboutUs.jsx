@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { AboutUsSection, AboutUsTitle, Text } from './styled/AboutUsComponents'
 
-const AboutUs = () => {
+const AboutUs = forwardRef((props, ref) => {
   return (
-    <AboutUsSection>
+    <AboutUsSection ref={ref} {...props}>
       <AboutUsTitle>Sobre nós</AboutUsTitle>
       <Text>
         Somos uma equipe de mestres e bachareis em Administração e Computação pela Universidade Federal Rural de Pernambuco. Acreditamos que as organizações devem atuar com responsabilidade social e ambiental, promovendo um impacto positivo na sociedade e no meio ambiente.
@@ -13,6 +13,6 @@ const AboutUs = () => {
       </Text>
     </AboutUsSection>
   )
-}
+})
 
 export default AboutUs

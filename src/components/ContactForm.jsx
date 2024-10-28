@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { forwardRef, useState } from "react"
 import { FormContainer, InputContainer, InputLabel, InputField, InvestmentContainer, InvestmentValue, RangeInput, SubmitButton, TextArea, FormTitle, MarksContainer, Mark, ErrorSpan } from './styled/ContactFormComponents'
 import Select from 'react-select'
 import { toast } from 'react-toastify'
@@ -55,7 +55,7 @@ const selectCustomStyles = {
   }),
 }
 
-const ContactForm = () => {
+const ContactForm = forwardRef((props, ref) => {
   const [isSubmittingForm, setIsSubmittingForm] = useState(false)
   const [selectedOptions, setSelectedOptions] = useState([])
   const [formValues, setFormValues] = useState({
@@ -168,7 +168,7 @@ const ContactForm = () => {
   }
 
   return (
-    <FormContainer onSubmit={handleSubmit}>
+    <FormContainer onSubmit={handleSubmit} ref={ref} {...props}>
       <FormTitle>Contato</FormTitle>
 
       <InputContainer>
@@ -243,7 +243,7 @@ const ContactForm = () => {
             {formValues.investment === 20000 ? "Até " : ""}
             {formValues.investment === 100000 ? "Mais de " : ""}
             {formValues.investment !== 20000 && formValues.investment !== 100000 ? "Cerca de " : ""}
-            R$ {formValues.investment},00
+            R$ {formValues.investment.toLocaleString('pt-BR')},00
           </InvestmentValue>
         </InvestmentContainer>
 
@@ -267,6 +267,6 @@ const ContactForm = () => {
       <SubmitButton type="submit" disabled={isSubmittingForm}>Enviar</SubmitButton>
     </FormContainer>
   )
-}
+})
 
 export default ContactForm

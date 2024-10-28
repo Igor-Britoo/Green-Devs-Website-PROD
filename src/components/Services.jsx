@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 import { CardsContainer, ServicesSection, ServicesTitle, Card, CardIcon ,CardTitle } from './styled/ServicesComponents'
 import conceptionIcon from '../assets/conception-icon.svg'
 import developmentIcon from '../assets/development-icon.svg'
 import designIcon from '../assets/design-icon.svg'
 
-const Services = () => {
+const Services = forwardRef((props, ref) => {
   return (
-    <ServicesSection>
+    <ServicesSection ref={ref} {...props}>
       <ServicesTitle>Serviços</ServicesTitle>
       <CardsContainer>
         <Card>
@@ -24,6 +24,6 @@ const Services = () => {
       </CardsContainer>
     </ServicesSection>
   )
-}
+})
 
 export default Services

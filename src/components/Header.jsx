@@ -3,7 +3,7 @@ import { HeaderSection, HeaderContainer, Logo, Nav, NavOption, HamburgerNav } fr
 import { useState } from 'react'
 import { Fade as Hamburger } from 'hamburger-react'
 
-const Header = () => {
+const Header = ({ homeRef, servicesRef, aboutUsRef, contactRef, faqRef }) => {
   const [navbarActive, setNavbarActive] = useState(false)
   const [isOpen, setOpen] = useState(false)
   
@@ -12,6 +12,12 @@ const Header = () => {
     else setNavbarActive(false)
   })
 
+  const scrollToSection = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <HeaderSection $navbarActive={`${navbarActive}`} $mobileMenuOpen={`${isOpen}`}>      
       <HeaderContainer>
@@ -19,19 +25,19 @@ const Header = () => {
 
         <Nav>
           <NavOption>
-            <a href="/">HOME</a>
+            <a href="#home" onClick={() => scrollToSection(homeRef)}>HOME</a>
           </NavOption>
           <NavOption>
-            <a href="/">SERVIÇOS</a>
+            <a href="#services" onClick={() => scrollToSection(servicesRef)}>SERVIÇOS</a>
           </NavOption>
           <NavOption>
-            <a href="/">SOBRE NÓS</a>
+            <a href="#about-us" onClick={() => scrollToSection(aboutUsRef)}>SOBRE NÓS</a>
           </NavOption>
           <NavOption>
-            <a href="/">CONTATO</a>
+            <a href="#contact" onClick={() => scrollToSection(contactRef)}>CONTATO</a>
           </NavOption>
           <NavOption>
-            <a href="/">FAQ</a>
+            <a href="#faq" onClick={() => scrollToSection(faqRef)}>FAQ</a>
           </NavOption>
         </Nav>
 
@@ -40,23 +46,23 @@ const Header = () => {
 
       <HamburgerNav open={isOpen}>
         <NavOption>
-          <a href="/">HOME</a>
+          <a href="#home" onClick={() => scrollToSection(homeRef)}>HOME</a>
         </NavOption>
         <NavOption>
-          <a href="/">SERVIÇOS</a>
+          <a href="#services" onClick={() => scrollToSection(servicesRef)}>SERVIÇOS</a>
         </NavOption>
         <NavOption>
-          <a href="/">SOBRE NÓS</a>
+          <a href="#about-us" onClick={() => scrollToSection(aboutUsRef)}>SOBRE NÓS</a>
         </NavOption>
         <NavOption>
-          <a href="/">CONTATO</a>
+          <a href="#contact" onClick={() => scrollToSection(contactRef)}>CONTATO</a>
         </NavOption>
         <NavOption>
-          <a href="/">FAQ</a>
+          <a href="#faq" onClick={() => scrollToSection(faqRef)}>FAQ</a>
         </NavOption>
       </HamburgerNav>
     </HeaderSection>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

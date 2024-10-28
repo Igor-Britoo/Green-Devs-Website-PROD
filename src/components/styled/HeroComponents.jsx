@@ -76,6 +76,7 @@ export const LearnMoreButton = styled.a`
   font-size: ${props => props.theme.fontSizes['xl']};
   margin-top: 64px;
   transition: background 0.3s ease;
+  text-decoration: none;
 
   &:hover {
     background: #466B43;
