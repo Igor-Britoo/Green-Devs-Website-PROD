@@ -9,7 +9,7 @@ const Footer = () => {
       <FooterContainer>
         <Section>
           <SocialLinks>
-            <IconLink href="#">
+            <IconLink href="https://www.linkedin.com/company/green-devs/">
               <FaLinkedin />
             </IconLink>
             <IconLink href="#">
@@ -32,8 +32,8 @@ const Footer = () => {
         <Section>
           <Contacts>
             <h4>Contacts</h4>
-            <span>(81) 9XXXX-XXXX</span>
-            <span>email@greendevs.com</span>
+            <a href="tel:+558198128701">+55 (81) 9812-8701</a>
+            <a href="mailto:contato@greendevs.tech">contato@greendevs.tech</a>
           </Contacts>
         </Section>
       </FooterContainer>

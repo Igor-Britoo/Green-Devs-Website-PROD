@@ -37,7 +37,7 @@ export const AboutUsTitle = styled.h2`
 export const Text = styled.p`
   font-weight: 400;
   font-size: ${props => props.theme.fontSizes['xxxl']};
-  text-align: justify;
+  text-align: center;
   color: #072B2B;
   max-width: 1280px;
 

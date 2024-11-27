@@ -12,7 +12,7 @@ const FAQ = forwardRef((props, ref) => {
     {
       question: 'Como é o processo de desenvolvimento e quanto tempo leva?',
       answer: 'Iniciamos com uma reunião para entender suas necessidades e objetivos, definimos o escopo do projeto, desenvolvemos um plano detalhado '
-            + 'com wireframes e desings visuais, construímos o site, realizamos testes rigorosos para garantir a fuincionalidade e segurança, lançamos '
+            + 'com wireframes e designs visuais, construímos o site, realizamos testes rigorosos para garantir a funcionalidade e segurança, lançamos '
             + 'o site, e oferecemos suporte contínuo.',
     },
     {
@@ -32,7 +32,7 @@ const FAQ = forwardRef((props, ref) => {
     },
     {
       question: 'Vocês oferecem manutenção contínua depois do desenvolvimento?',
-      answer: 'Sim, oferecemos planos de manutenção contínua para garantir que seu site esteja sempre seguro, atualizado e funcnionando perfeitamente.',
+      answer: 'Sim, oferecemos planos de manutenção contínua para garantir que seu site esteja sempre seguro, atualizado e funcionando perfeitamente.',
     },
   ];
 
